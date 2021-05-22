@@ -1,0 +1,8 @@
+<%= image_tag(@user.image_cover, class: "cover-image") %>
+<div class="sidenav2">
+  <div class="d-flex flex-column float-right rounded" >
+    <%= image_tag(@user.avatar_thumbnail, class: "rounded-circle")  %>
+    <%=follow(@user) %>
+    <p style="font-size:12px;">Followers <%=@user.followers(@user)%> Followings <%=@user.following(@user)%></p>
+  </div>
+</div>
