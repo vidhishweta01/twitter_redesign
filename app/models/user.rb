@@ -41,6 +41,7 @@ class User < ApplicationRecord
   def follow(user)
     Following.create(followed_id: user.id)
   end
+
   private
 
   def add_default_avatar
