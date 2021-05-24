@@ -35,7 +35,7 @@ class User < ApplicationRecord
   end
 
   def already_followed?(id1, id2)
-    !Following.where(user_id: id1, Followed_id: id2).empty?
+    !Following.where(user_id: id1, followed_id: id2).empty?
   end
 
   def follow(user)
