@@ -1,7 +1,7 @@
 module UserHelper
   # rubocop:disable Metrics/PerceivedComplexity
   # rubocop:disable Metrics/CyclomaticComplexity
-  def follow(user) 
+  def follow(user)
     if signed_in? && !current_user.already_followed?(current_user.id, user.id) && current_user != user
       link_to 'Follow', followings_create_path(ids: { id1: current_user.id, id2: user.id })
     elsif signed_in? && current_user.already_followed?(current_user.id, user.id) && current_user != user

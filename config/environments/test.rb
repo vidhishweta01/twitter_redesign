@@ -1,5 +1,5 @@
 require 'active_support/core_ext/integer/time'
-
+# rubocop:disable Layout/ExtraSpacing
 # The test environment is used exclusively to run your application's
 # test suite. You never need to work with it otherwise. Remember that
 # your test database is "scratch space" for the test suite and is wiped
@@ -21,7 +21,7 @@ Rails.application.configure do
   config.public_file_server.headers = {
     'Cache-Control' => "public, max-age=#{1.hour.to_i}"
   }
-  # rubocop:enable Layout/ExtraSpacing
+  
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -58,4 +58,4 @@ Rails.application.configure do
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 end
-# rubocop:disable Layout/ExtraSpacing
+# rubocop:enable Layout/ExtraSpacing
