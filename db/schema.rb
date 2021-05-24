@@ -9,7 +9,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
-
+# rubocop:disable Layout/ExtraSpacing
 ActiveRecord::Schema.define(version: 20_210_521_132_824) do  # rubocop:disable Metrics/BlockLength
   create_table 'active_storage_attachments', force: :cascade do |t|
     t.string 'name', null: false
@@ -73,3 +73,4 @@ ActiveRecord::Schema.define(version: 20_210_521_132_824) do  # rubocop:disable M
   add_foreign_key 'active_storage_variant_records', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'followings', 'users'
 end
+# rubocop:enable Layout/ExtraSpacing

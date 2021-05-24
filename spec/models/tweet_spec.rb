@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
-  subject {
-    described_class.new(content: 'hello world', user_id: 4)
-  }
+  subject { described_class.new(content: 'hello world', user_id: 4) }
 
   it 'is valid with valid attributes' do
     expect(subject).to be_valid

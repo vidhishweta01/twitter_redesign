@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 APP_ROOT = File.expand_path('..', __dir__)
+# rubocop:disable Layout/MultilineMethodCallIndentation
 Dir.chdir(APP_ROOT) do
   yarn = ENV['PATH'].split(File::PATH_SEPARATOR)
                     .reject { |dir| File.expand_path(dir) == __dir__ }
@@ -16,3 +17,4 @@ Dir.chdir(APP_ROOT) do
     exit 1
   end
 end
+# rubocop:enable Layout/MultilineMethodCallIndentation

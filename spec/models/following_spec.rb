@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Following, type: :model do
-  subject {
-    described_class.new(user_id: 4, followed_id: 5)
-  }
+  subject { described_class.new(user_id: 4, followed_id: 5) }
 
   it 'is valid with valid attributes' do
     expect(subject).to be_valid
