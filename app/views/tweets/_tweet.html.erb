@@ -1,0 +1,11 @@
+<%if tweet.user == current_user|| current_user.already_followed?(current_user.id, tweet.user.id)%>
+<div class="border border-shadow">
+    <div class='d-flex flex-row' >
+      <%= image_tag(tweet.user.avatar_thumbnail, class: "tweet-image rounded-circle")  %>
+      <%= link_to tweet.user.username, user_path(tweet.user), class: 'tweet-author' %>
+    </div>
+  <p class="tweet-content">
+    <%= tweet.content %>
+  </p>
+</div>
+<%end%>

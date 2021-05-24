@@ -1,0 +1,19 @@
+<%= image_tag(@user.image_cover, class: "cover-image") %>
+<div class="sidenav2">
+  <div class="d-flex flex-column float-right rounded" >
+    <%= image_tag(@user.avatar_thumbnail, class: "rounded-circle")  %>
+    <%=follow(@user) %>
+    <p style="font-size:12px;">Followers <%=@user.followers(@user)%> Followings <%=@user.following(@user)%></p>
+  </div>
+</div>
+<div class="mobile-view" >
+    <%= image_tag(@user.avatar_thumbnail, class:"mobile-dp")  %>
+    <%=follow(@user) %>
+    <p style="font-size:12px;">Followers <%=@user.followers(@user)%></p>
+    <p style="font-size:12px;"> Followings <%=@user.following(@user)%></p>
+</div>
+<%if current_user == @user|| current_user.already_followed?(current_user.id, @user.id)%>
+    <div class="usertweet container-fluid w-50" ><%= render @tweets%></div>
+<%end%>
+  
+
