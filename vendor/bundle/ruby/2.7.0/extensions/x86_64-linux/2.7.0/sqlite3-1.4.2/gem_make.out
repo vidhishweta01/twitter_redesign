@@ -1,5 +1,5 @@
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/sqlite3-1.4.2/ext/sqlite3
-/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210519-8102-s13um9.rb extconf.rb
+/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210524-33661-gbttbl.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -81,4 +81,4 @@ linking shared-object sqlite3/sqlite3_native.so
 
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20210519-8102-1l7jo1y/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20210524-33661-1rx6h9m/sqlite3

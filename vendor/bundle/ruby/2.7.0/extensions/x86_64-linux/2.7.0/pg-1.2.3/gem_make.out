@@ -1,5 +1,5 @@
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/pg-1.2.3/ext
-/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210519-17813-6on829.rb extconf.rb
+/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210524-33661-md763j.rb extconf.rb
 checking for pg_config... yes
 Using config values from /usr/bin/pg_config
 checking for libpq-fe.h... yes
@@ -50,4 +50,4 @@ linking shared-object pg_ext.so
 
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/pg-1.2.3/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 pg_ext.so ./.gem.20210519-17813-t70n9z
+/usr/bin/install -c -m 0755 pg_ext.so ./.gem.20210524-33661-1spkz9m

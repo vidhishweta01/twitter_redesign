@@ -1,5 +1,5 @@
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210519-8102-uza8ej.rb extconf.rb
+/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210524-33661-1xb4x3e.rb extconf.rb
 creating Makefile
 
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.so
 
 current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20210519-8102-347ozu/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20210524-33661-1efpl9u/sassc
