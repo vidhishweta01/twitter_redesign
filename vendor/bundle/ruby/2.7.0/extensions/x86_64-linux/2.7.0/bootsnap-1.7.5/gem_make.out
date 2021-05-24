@@ -1,0 +1,15 @@
+current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+/home/shweta/.rbenv/versions/2.7.1/bin/ruby -I /home/shweta/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20210519-8102-1dfk033.rb extconf.rb
+creating Makefile
+
+current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/shweta/Desktop/microverse_project/twitter_redesign/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210519-8102-3mik4n/bootsnap
