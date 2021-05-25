@@ -1,16 +1,51 @@
 <%= image_tag(@user.image_cover, class: "cover-image") %>
-<div class="sidenav2">
-  <div class="d-flex flex-column float-right rounded" >
-    <%= image_tag(@user.avatar_thumbnail, class: "rounded-circle")  %>
-    <%=follow(@user) %>
-    <p style="font-size:12px;">Followers <%=@user.followers(@user)%> Followings <%=@user.following(@user)%></p>
+<div class="sidenav2 d-flex flex-column float-right rounded border">
+  <div class="d-flex flex-column ml-4 border" >
+    <%= image_tag(@user.avatar_thumbnail, class: "rounded-circle w-75 h-75 ml-4 pl-4")%>
+    <h3 style="color: black; text-align: center"><%=@user.username%></h3>
+  </div><br/>
+  <%unless @user==current_user%>
+  <div class="btn w-50 btn-danger" style="margin-left:90px;"><%=follow(@user) %></div><br/>
+  <%end%>
+  <div class="d-flex flex-row w-100 border-top border-bottom justify-content-between">
+    <div class="d-flex flex-column border-right text-center" style="width: 33.3%" >
+      <h3 style="font-weight: bolder; "><%=@user.followers(@user)%></h3>
+      <p>Followers</p>
+    </div>
+    <div class="d-flex flex-column border-right border-shadow text-center" style="width: 33.3%" >
+      <h3 style="font-weight: bolder;"><%=@user.following(@user)%></h3>
+      <p>Followings </p>
+    </div>
+    <div class="d-flex flex-column text-center" style="width: 33.3%" >
+      <h3 style="font-weight: bolder;"><%=@tweets.count%></h3>
+      <p>tweets</p>
+    </div>
   </div>
+  <br/>
+  <h4 class="text-center">Followed by</h4>
+  <div class="d-flex flex-column">
+    <% @user.followed_by(@user).each do |f|%>
+    <div class="d-flex flex-row border" style="height: 75px"> <div class="w-50 h-100 m-2"><%= image_tag(f.avatar_thumbnail, class: "rounded-circle w-50 h-75") %></div>
+    <p style="font-weight: bolder; margin-top: 20px;"><%=f.username%></p></div>
+    <%end%>
+  </div>  
 </div>
+  <br/>
+  
 <div class="mobile-view" >
+    <h3 style="color: black:"><%=@user.username%></h3><br/>
     <%= image_tag(@user.avatar_thumbnail, class:"mobile-dp")  %>
     <%=follow(@user) %>
     <p style="font-size:12px;">Followers <%=@user.followers(@user)%></p>
     <p style="font-size:12px;"> Followings <%=@user.following(@user)%></p>
+    <p style="font-size:12px;"> tweets <%=@tweets.count%></p>
+    <h4 class="text-center">Followed by</h4>
+  <div class="d-flex flex-column">
+    <% @user.followed_by(@user).each do |f|%>
+    <div class="d-flex flex-row border" style="height: 75px"> <div class="w-25 h-100 m-2"><%= image_tag(f.avatar_thumbnail, class: "rounded-circle w-50 h-75") %></div>
+    <p style="font-weight: bolder;margin-top: 20px;"><%=f.username%></p></div>
+    <%end%>
+  </div>  
 </div>
 
 <div class="usertweet container-fluid w-50" style="align-items: center;margin-top:5vh">
@@ -26,4 +61,3 @@
     <div class="usertweet container-fluid w-50" ><%= render @tweets%></div>
 <%end%>
   
-

@@ -1,12 +1,24 @@
 <div class="sidenav">
   <%if user_signed_in? %>
-  <div class="float-right rounded">
-<%= image_tag(current_user.avatar_thumbnail, class: "rounded-circle w-50 h-50")  %>
+  <div class="ml-4 pl-4 rounded">
+<%= image_tag(current_user.avatar_thumbnail, class: "rounded-circle ml-4 w-50 h-50")  %>
 </div>
 <br/>
- <p style="font-size:12px; color: rgb(241, 227, 227);">Followers <%=current_user.followers(current_user)%> Followings <%=current_user.following(current_user)%></p>
-  <%= link_to "Edit Profile", edit_user_registration_path %>
+<h3 class="text-center" style="color: rgb(241, 227, 227);"><%=current_user.username%></h3>
+<div class="d-flex flex-row border-top border-bottom justify-content-between">
+    <div class="d-flex flex-column border-right text-center" style="width: 50%" >
+      <h3 style="font-weight: bolder;color: rgb(241, 227, 227);"><%=current_user.followers(current_user)%></h3>
+      <p style="font-size: x-small;color: rgb(241, 227, 227);">Followers</p>
+    </div>
+    <div class="d-flex flex-column  text-center" style="width: 50%" >
+      <h3 style="font-weight: bolder;color: rgb(241, 227, 227);"><%=current_user.following(current_user)%></h3>
+      <p style="font-size: x-small;color: rgb(241, 227, 227);">Followings </p>
+    </div>u 
+  </div>
+ <%= link_to "Edit Profile", edit_user_registration_path %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <%else%>
+  <%= link_to "Sign up", new_user_registration_path %>
   <%end%>
   <%= link_to "Users",users_path%>
   

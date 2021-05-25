@@ -34,6 +34,15 @@ class User < ApplicationRecord
     Following.where(user_id: user.id).count
   end
 
+  def suggestions(user)
+    User.where.not(id: user.id)
+  end
+
+  def followed_by(user)
+    ids = Following.where(followed_id: user.id).limit(4).pluck(:user_id)
+    User.where(id: ids)
+  end
+
   def already_followed?(id1, id2)
     !Following.where(user_id: id1, followed_id: id2).empty?
   end
@@ -48,7 +57,7 @@ class User < ApplicationRecord
     unless avatar.attached? # rubocop:disable Style/GuardClause
       avatar.attach(
         io: File.open(
-          Rails.root.join('app', 'assets', 'images', 'default_profile.jpg')
+          Rails.root.join('app', 'assets', 'images', 'https://drive.google.com/file/d/1S2OsWmz5nHQuWcPu-KJvpRDIpUz1--oa/view?usp=sharing')
         ), filename: 'default_profile.jpg',
         content_type: 'image/jpg '
       )
@@ -59,7 +68,7 @@ class User < ApplicationRecord
     unless image.attached? # rubocop:disable Style/GuardClause
       image.attach(
         io: File.open(
-          Rails.root.join('app', 'assets', 'images', 'default_profile.jpg')
+          Rails.root.join('app', 'assets', 'images', 'https://drive.google.com/file/d/1S2OsWmz5nHQuWcPu-KJvpRDIpUz1--oa/view?usp=sharing')
         ), filename: 'default_profile.jpg',
         content_type: 'image/jpg '
       )
