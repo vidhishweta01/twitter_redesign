@@ -14,9 +14,8 @@
     <%= form_for(@tweet) do |form| %>
     <%= form.label :content %>
     <%= form.text_field :content, id: :tweet_content, class: 'form-control', placeholder: 'Add New Tweet' %>
-    <br/>
     <%= form.submit 'Save', class: 'btn btn-primary' %>
     <% end %>
-  </div>
+  </div><br/>
 </section>
 <div class="usertweet container-fluid w-50" style="align-items: center;margin-top:5vh"><%= render @timeline_tweets%></div>
