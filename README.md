@@ -50,7 +50,7 @@ Postgres: >=9.5
 Instal gems with:
 
 ```
-bundle install
+bundle install --path vendor/bundle
 ```
 
 Setup database with:
