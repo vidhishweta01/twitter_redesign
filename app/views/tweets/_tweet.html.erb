@@ -1,11 +1,13 @@
 <%if tweet.user == current_user|| current_user.already_followed?(current_user.id, tweet.user.id)%>
 <div class="d-flex flex-column border border-shadow">
-    <div class='d-flex flex-row' >
+    <div class='d-flex flex-row justify-content-between p-2' >
       <%= image_tag(tweet.user.avatar_thumbnail, class: "tweet-image rounded-circle")  %>
       <%= link_to tweet.user.username, user_path(tweet.user), class: 'tweet-author' %>
+      <p class="float-right"><%= tweet.created_at%></p>
     </div>
   <p class="tweet-content">
     <%= tweet.content %>
   </p>
+  <p><%= like_or_dislike_btn(tweet) %> <%=tot_likes(tweet)%></p>
 </div>
 <%end%>

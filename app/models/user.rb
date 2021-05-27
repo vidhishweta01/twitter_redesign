@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id'
   has_many :followings, foreign_key: 'following_id'
   has_many :tweets
-
+  has_many :likes, dependent: :destroy
   def avatar_thumbnail
     if avatar.attached?
       avatar.variant(resize: '150X190!').processed

@@ -41,6 +41,11 @@
     background-color: #8ad9f8;
 
   }
+  
+  .navbar {
+    background-color: #8ad9f8;
+    margin-left: 150px;
+  }
 
   .sidenav2 {
     height: 100%;
@@ -73,7 +78,12 @@
     color: #f1f1f1;
     background-color:  #021c29;
   }
-
+  
+  .sign_in {
+    opacity: 0.87;
+    width: 25%;
+  }
+  
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
@@ -124,7 +134,30 @@
     
   }
 
+  @media (max-width: 768px) {
+    
+    .sign_in {
+      width: 50%;
+    }
+
+
+  }
+
   @media (max-width: 425px) {
+     
+    .sidenav {
+      width: 100px;
+    }
+    
+    .navbar {
+      margin-left: 98px;
+    }
+
+    .sign_in {
+      width: 50%;
+    }
+
+
     .user-list {
       width: 45%;
       display: flex;
