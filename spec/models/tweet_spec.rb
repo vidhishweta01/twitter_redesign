@@ -13,7 +13,7 @@ RSpec.describe Tweet, type: :model do
     expect(subject).to_not be_valid
   end
   
-  describe "Associations" do
-  it { should belong_to(:user).without_validating_presence }
-end
+  describe 'Associations' do
+    it { should belong_to(:user).without_validating_presence }
+  end
 end
