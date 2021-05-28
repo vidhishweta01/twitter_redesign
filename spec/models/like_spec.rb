@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe like, type: :model do
+RSpec.describe Like, type: :model do
   subject { described_class.new(user_id: 4, tweet_id: 11) }
 
   it 'is not valid without a user' do

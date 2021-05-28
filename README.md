@@ -32,7 +32,7 @@ As a logged-in user:
 
 ## Live Demo
 
-https://calm-fortress-48296.herokuapp.com/
+https://shrouded-peak-65158.herokuapp.com/
 
 
 ## Getting Started
@@ -44,13 +44,14 @@ To get a local copy up and running follow these simple example steps.
 Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
+imagemagic
 
 ### Setup
 
 Instal gems with:
 
 ```
-bundle install
+bundle install --path vendor/bundle
 ```
 
 Setup database with:
