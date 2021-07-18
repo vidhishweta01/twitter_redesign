@@ -1,0 +1,10 @@
+<div class="container-fluid bg-light p-4 w-50" >
+  <% @users.each do |user| %>
+  <div class="user-list d-flex flex-lg-md-row bg-light text-dark border boder-shadow">
+  <%= image_tag(user.avatar_thumbnail, class: "tweet-image rounded-circle")  %>
+  <p class="user"><%=user.username%></p>
+  <p class="user_link px-lg-md-3"><%=follow(user) %></p>
+  <p class="user_link"><%= link_to '  See Profile',  user_path(user)%></p>
+  </div>
+  <%end%>
+</div>
