@@ -1,15 +1,4 @@
 # Twitter Redesign
-
-![Screenshot1.png](./app/assets/images/Screenshot1.png)
-
-![Screenshot2.png](./app/assets/images/Screenshot3.png)
-
-![Screenshot3.png](./app/assets/images/Screenshot2.png)
-
-![Screenshot4.png](./app/assets/images/Screenshot4.png)
-
-![Screenshot5.png](./app/assets/images/Screenshot5.png)
-
 This project implements some feature of twitter and have three models in it user, following and tweets
 As a guest user:
 1. able to create account/log in.
@@ -24,6 +13,17 @@ As a logged-in user:
 5. able to create new tweets (text only).
 6. able to see “Timeline” page with tweets (with number of likes and comments) written by me and all my friends (the most recent tweets on the top).
 7. Timeline page should be the root page of the app.
+
+
+![Screenshot1.png](./app/assets/images/Screenshot1.png)
+
+![Screenshot2.png](./app/assets/images/Screenshot3.png)
+
+![Screenshot3.png](./app/assets/images/Screenshot2.png)
+
+![Screenshot4.png](./app/assets/images/Screenshot4.png)
+
+![Screenshot5.png](./app/assets/images/Screenshot5.png)
 
 ## Built With
 
